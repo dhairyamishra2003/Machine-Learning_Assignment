@@ -10,28 +10,27 @@ Dataset Shape: The .shape attribute provides the dimensions of the dataset (numb
 Summary Statistics: The .describe() method calculates various summary statistics (mean, standard deviation, min, max, and quartiles) for each feature.
 
 CODE OF DATASET EXPLORATION:
-
-Load the Iris Dataset
-from sklearn.datasets 
-import load_iris 
+from sklearn.datasets import load_iris
 import pandas as pd
-Load the dataset
+
+# Load the dataset
 iris = load_iris()
 
-Create a DataFrame from the dataset
-df = pd.DataFrame(data=iris.data, columns=iris.feature_names) df['target'] = iris.target
+# Create a DataFrame from the dataset
+df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+df['target'] = iris.target
 
-Display the First Five Rows
-Display the first five rows of the dataset
-print("First five rows:") print(df.head())
+# Display the first five rows of the dataset
+print("First five rows:")
+print(df.head())
 
-Display the Dataset’s Shape
-Display the shape of the dataset
-print("\nDataset shape:") print(df.shape)
+# Display the shape of the dataset
+print("\nDataset shape:")
+print(df.shape)
 
-Compute Summary Statistics
-Compute summary statistics
-print("\nSummary statistics:") print(df.describe())
+# Compute summary statistics
+print("\nSummary statistics:")
+print(df.describe())
 
 2.Data Splitting(download(1).ipynb:- Explanation:- train_test_split Function: This function randomly splits the dataset into training and testing sets. test_size=0.2 specifies that 20% of the data should be allocated to the test set, and the remaining 80% will be used for training. random_state=42 ensures that the split is reproducible (you’ll get the same split each time you run the code). Printing the Number of Samples: The .shape[0] attribute of the resulting arrays gives the number of samples (rows) in each set.
 
