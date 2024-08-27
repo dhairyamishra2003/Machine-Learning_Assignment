@@ -1,5 +1,5 @@
 # Machine-Learning_Assignment
-Machine-Learning_Assignment
+
 DOCUMENTATION OF MACHINE-LEARNING_ASSIGNMENT:-
 
 1.Dataset Exploration(download.ipynb):-
@@ -10,6 +10,7 @@ Dataset Shape: The .shape attribute provides the dimensions of the dataset (numb
 Summary Statistics: The .describe() method calculates various summary statistics (mean, standard deviation, min, max, and quartiles) for each feature.
 
 CODE OF DATASET EXPLORATION:
+
 from sklearn.datasets import load_iris
 import pandas as pd
 
@@ -35,17 +36,35 @@ print(df.describe())
 2.Data Splitting(download(1).ipynb:- Explanation:- train_test_split Function: This function randomly splits the dataset into training and testing sets. test_size=0.2 specifies that 20% of the data should be allocated to the test set, and the remaining 80% will be used for training. random_state=42 ensures that the split is reproducible (you’ll get the same split each time you run the code). Printing the Number of Samples: The .shape[0] attribute of the resulting arrays gives the number of samples (rows) in each set.
 
 CODE OF DATA SPLITTING:
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
 
-from sklearn.datasets import load_iris from sklearn.model_selection import train_test_split
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data  # Feature matrix
+y = iris.target  # Target vector
 
-Load the Iris dataset
-iris = load_iris() X = iris.data # Feature matrix y = iris.target # Target vector
-
-Split the dataset into training and testing sets (80-20 split)
+# Split the dataset into training and testing sets (80-20 split)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-Print the number of samples in both the training and testing sets
-print(f"Number of samples in the training set: {X_train.shape[0]}") print(f"Number of samples in the testing set: {X_test.shape[0]}")
+# Print the number of samples in the training and testing sets
+print(f"Number of samples in the training set: {X_train.shape[0]}")
+print(f"Number of samples in the testing set: {X_test.shape[0]}")
+
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data  # Feature matrix
+y = iris.target  # Target vector
+
+# Split the dataset into training and testing sets (80-20 split)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Print the number of samples in the training and testing sets
+print(f"Number of samples in the training set: {X_train.shape[0]}")
+print(f"Number of samples in the testing set: {X_test.shape[0]}")
 
 3.Linear Regression(download(3).ipynb:-
 Explanation:-
